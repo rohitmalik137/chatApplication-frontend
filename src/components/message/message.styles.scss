@@ -1,0 +1,63 @@
+.colorWhite {
+  color: white;
+}
+
+.colorDark {
+  color: #353535;
+}
+
+.backgroundBlue {
+  background: #2979ff;
+}
+
+.backgroundLight {
+  background: #f3f3f3;
+}
+
+.adminGeneratedContainer {
+  text-align: center;
+  margin: 15px;
+
+  .adminGeneratedContainer__text {
+    border: 1px solid rgb(173, 215, 250);
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(204, 232, 255);
+  }
+}
+
+.end {
+  justify-content: flex-end;
+}
+.start {
+  justify-content: flex-start;
+}
+.myMsg {
+  display: flex;
+  margin: 15px;
+
+  .userMe {
+    background-color: hsl(218, 100%, 83%);
+  }
+
+  .myMsg__inner {
+    border: 1px solid rgb(141, 141, 141);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+    .myMsg__inner--header {
+      display: flex;
+      justify-content: flex-start;
+      padding: 2px;
+      text-transform: capitalize;
+      border-bottom: 1px solid rgb(185, 184, 184);
+      font-weight: 600;
+    }
+
+    .adminGeneratedContainer__text {
+      padding: 5px;
+      border-radius: 10px;
+    }
+  }
+}
