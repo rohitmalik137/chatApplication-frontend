@@ -27,7 +27,7 @@ const HomePage = ({ location }) => {
 
     socket.emit('join', { name, room }, () => {});
 
-    console.log(socket);
+    // console.log(socket);
   }, [ENDPOINT, location.search]);
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const HomePage = ({ location }) => {
   // }, []);
 
   const sendMessage = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
 
     if (message) {
       socket.emit('sendMessage', message, () => setMessage(''));
@@ -52,9 +52,6 @@ const HomePage = ({ location }) => {
   // console.log(message);
   return (
     <div className="outerContainer">
-      <div className="leftContainer">
-        <h1>List of users!</h1>
-      </div>
       <div className="msgContainer">
         <ChatHeader room={room} />
         <Messages messages={messages} name={name} />
