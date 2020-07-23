@@ -12,6 +12,7 @@ let socket;
 const HomePage = ({ location }) => {
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
+  const [users, setUsers] = useState('');
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState('');
   // const [roomData, setRoomData] = useState([]);
@@ -34,6 +35,10 @@ const HomePage = ({ location }) => {
     socket.on('message', (message) => {
       setMessages((messages) => [...messages, message]);
     });
+
+    socket.on('roomData', ({ users }) => {
+      setUsers(users);
+    });
   }, []);
 
   // useEffect(() => {
@@ -53,7 +58,7 @@ const HomePage = ({ location }) => {
   return (
     <div className="outerContainer">
       <div className="msgContainer">
-        <ChatHeader room={room} />
+        <ChatHeader room={room} users={users} />
         <Messages messages={messages} name={name} />
         <CustomInput
           className="footer"

@@ -60,7 +60,7 @@ class CustomInput extends React.Component {
     );
   };
   render() {
-    const { message, setMessage, sendMessage } = this.props;
+    const { message } = this.props;
     // console.log(message);
     return (
       <div className="custom-input__outer-Container">
