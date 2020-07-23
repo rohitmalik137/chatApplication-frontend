@@ -74,7 +74,7 @@ class CustomInput extends React.Component {
         ) : null}
         <form className="form">
           <i
-            className="far fa-grin-tongue-wink emoji-icon"
+            className="far fa-kiss-wink-heart emoji-icon"
             onClick={this.showEmojis}
           ></i>
           <input

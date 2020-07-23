@@ -31,7 +31,7 @@ class ChatHeader extends Component {
             </a>
           </div>
         </div>
-        <div className="abc">
+        <div className="userListComponent__Container">
           {this.state.toggleUsersList ? <UsersList users={users} /> : null}
         </div>
       </div>

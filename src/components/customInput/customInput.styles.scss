@@ -1,10 +1,26 @@
 .emoji-mart {
   width: 100% !important;
+  background-color: #252526;
+}
+.emoji-mart-category-label span {
+  background-color: #252526;
+  color: #999999;
 }
 .custom-input__outer-Container {
+  background-color: #252526;
+  border: 3px solid #515152;
+  border-top: none;
+  position: relative;
+
+  .emoji-bar {
+    position: absolute;
+    bottom: 75px;
+    left: 0;
+  }
+
   .form {
     display: flex;
-    border: 2px solid #d3d3d3;
+    border: 1px solid #515152;
     margin: auto;
     margin-bottom: 10px;
     border-radius: 40px;
@@ -14,7 +30,8 @@
     .emoji-icon {
       font-size: 36px;
       display: flex;
-      padding-left: 5px;
+      padding-left: 15px;
+      color: #999999;
       align-items: center;
       cursor: pointer;
     }
@@ -24,6 +41,8 @@
       outline: none;
       border-radius: 0;
       padding-left: 20px;
+      background-color: #252526;
+      color: #999999;
       width: 85%;
       height: 55px;
       font-size: 1.2em;

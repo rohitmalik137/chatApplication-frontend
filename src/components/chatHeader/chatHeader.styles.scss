@@ -3,7 +3,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #2979ff;
+    background: #161616;
+    border: 3px solid #515152;
     border-radius: 5px 5px 0 0;
     height: 60px;
     width: 100%;
@@ -18,7 +19,7 @@
       width: 75px;
       cursor: pointer;
       margin-left: 5%;
-      color: white;
+      color: #cfd2d6;
 
       .onlineIcon {
         border: 1px solid black;
@@ -27,7 +28,7 @@
       .roomName {
         text-transform: capitalize;
         padding: 10px 20px;
-        border: 1px solid rgb(38, 0, 255);
+        border: 1px solid #515152;
         border-radius: 20px;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -42,7 +43,7 @@
       margin-right: 5%;
     }
   }
-  .abc {
+  .userListComponent__Container {
     position: absolute;
     z-index: 1000;
   }
