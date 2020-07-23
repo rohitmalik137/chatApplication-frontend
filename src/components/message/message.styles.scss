@@ -30,6 +30,7 @@
     border: 1px solid rgb(141, 141, 141);
     border-radius: 10px;
     display: flex;
+    max-width: 60%;
     flex-direction: column;
 
     .myMsg__inner--header {
@@ -43,6 +44,9 @@
     }
 
     .adminGeneratedContainer__text {
+      text-align: justify; /* For Edge */
+      -moz-text-align-last: justify; /* For Firefox prior 58.0 */
+      text-align-last: justify;
       padding: 10px;
       border-radius: 10px;
     }
