@@ -44,9 +44,7 @@
     }
 
     .adminGeneratedContainer__text {
-      text-align: justify; /* For Edge */
-      -moz-text-align-last: justify; /* For Firefox prior 58.0 */
-      text-align-last: justify;
+      word-wrap: break-word;
       padding: 10px;
       border-radius: 10px;
     }
