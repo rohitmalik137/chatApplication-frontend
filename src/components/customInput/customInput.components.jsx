@@ -22,7 +22,7 @@ class CustomInput extends React.Component {
   };
 
   handleSubmit = (e) => {
-    e.preventDefault();
+    e.persist();
 
     this.setState(
       {
@@ -30,14 +30,14 @@ class CustomInput extends React.Component {
       },
       () => {
         this.props.sendMessage(e);
-        this.setState({ inputText: '' });
+        this.setState({ inputText: '', showEmojis: false });
       }
     );
   };
 
   showEmojis = (e) => {
     this.setState({
-      showEmojis: true,
+      showEmojis: !this.state.showEmojis,
     });
   };
 
@@ -72,27 +72,29 @@ class CustomInput extends React.Component {
             />
           </span>
         ) : null}
-        <div className="customInputOuterContainer">
-          <p className="emoji-icon" onClick={this.showEmojis}>
-            {String.fromCodePoint(0x1f60a)}
-          </p>
-          <form className="form">
-            <input
-              className="input"
-              type="text"
-              placeholder="type a message..."
-              value={message}
-              onChange={(event) => this.handeChange(event.target.value)}
-              // onChange={(event) => setMessage(event.target.value)}
-              onKeyPress={(event) =>
-                event.key === 'Enter' ? this.handleSubmit(event) : null
-              }
-            />
-            <button className="send" onClick={(event) => sendMessage(event)}>
-              Send
-            </button>
-          </form>
-        </div>
+        <form className="form">
+          <i
+            className="far fa-grin-tongue-wink emoji-icon"
+            onClick={this.showEmojis}
+          ></i>
+          <input
+            className="input"
+            type="text"
+            placeholder="type a message..."
+            value={message}
+            onChange={(event) => this.handeChange(event.target.value)}
+            // onChange={(event) => setMessage(event.target.value)}
+            onKeyPress={(event) =>
+              event.key === 'Enter' ? this.handleSubmit(event) : null
+            }
+          />
+          <button
+            className="send"
+            onClick={(event) => this.handleSubmit(event)}
+          >
+            Send
+          </button>
+        </form>
       </div>
     );
   }

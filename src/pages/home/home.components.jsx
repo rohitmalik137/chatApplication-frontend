@@ -43,7 +43,7 @@ const HomePage = ({ location }) => {
   // }, []);
 
   const sendMessage = (event) => {
-    // event.preventDefault();
+    event.preventDefault();
 
     if (message) {
       socket.emit('sendMessage', message, () => setMessage(''));

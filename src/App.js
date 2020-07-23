@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Route path='/' exact component={WelcomePage} />
-        <Route path='/chat' exact component={HomePage} />
+        <Route path="/" exact component={WelcomePage} />
+        <Route path="/chat" exact component={HomePage} />
       </Router>
     </div>
   );
